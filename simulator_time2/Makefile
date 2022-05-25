@@ -21,8 +21,8 @@ COMMON = $(SRC_DIR)/common/print.c $(SRC_DIR)/common/convert.c $(SRC_DIR)/common
 CPU = $(SRC_DIR)/hardware/cpu/mmu.c $(SRC_DIR)/hardware/cpu/isa.c $(SRC_DIR)/hardware/cpu/sram.c
 MEMORY = $(SRC_DIR)/hardware/memory/dram.c $(SRC_DIR)/hardware/memory/swap.c 
 LINK = $(SRC_DIR)/linker/parseElf.c $(SRC_DIR)/linker/staticlink.c
-ALGORITHM = $(SRC_DIR)/algorithm/array.c $(SRC_DIR)/algorithm/hashtable.c $(SRC_DIR)/algorithm/linkedlist.c $(SRC_DIR)/algorithm/trie.c
-MALLOC = $(SRC_DIR)/malloc/mem_alloc.c $(SRC_DIR)/malloc/explicit_list.c $(SRC_DIR)/malloc/implicit_list.c $(SRC_DIR)/malloc/small_list.c
+ALGORITHM = $(SRC_DIR)/algorithm/array.c $(SRC_DIR)/algorithm/hashtable.c $(SRC_DIR)/algorithm/linkedlist.c $(SRC_DIR)/algorithm/trie.c $(SRC_DIR)/algorithm/bst.c $(SRC_DIR)/algorithm/rbt.c
+MALLOC = $(SRC_DIR)/malloc/mem_alloc.c $(SRC_DIR)/malloc/explicit_list.c $(SRC_DIR)/malloc/implicit_list.c $(SRC_DIR)/malloc/small_list.c $(SRC_DIR)/malloc/block.c $(SRC_DIR)/malloc/segregated_list.c $(SRC_DIR)/malloc/redblack_tree.c 
 
 # main
 TEST_HARDWARE = $(SRC_DIR)/tests/test_hardware.c
@@ -81,14 +81,10 @@ false_sharing:
 .PHONY: malloc
 
 malloc:
-	$(CC) -Wall -g -O0 -Werror -std=gnu99 -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unused-function -I$(SRC_DIR) $(COMMON) $(ALGORITHM) $(MALLOC) $(TEST_MALLOC) -o $(BIN_MALLOC)
+	$(CC) -Wall -g -O0 -Werror -std=gnu99 -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unused-function -I$(SRC_DIR) -DREDBLACK_TREE $(COMMON) $(ALGORITHM) $(MALLOC) $(TEST_MALLOC) -o $(BIN_MALLOC)
 	./$(BIN_MALLOC)
+# -DIMPLICIT_FREE_LIST  -DEXPLICIT_FREE_LIST -DREDBLACK_TREE
 
-
-.PHONY: mallocc
-mallocc:
-	$(CC) -Wall -g -O0 -Werror -std=gnu99 -Wno-unused-but-set-variable -Wno-unused-variable -Wno-unused-function -I$(SRC_DIR) -DDEBUG_MALLOC ./src/algorithm/linkedlist.c ./src/malloc/mem_alloc.c -o ./bin/malloc
-	./bin/malloc
 
 clean:
 	rm -f *.o *~ $(EXE_HARDWARE) $(EXE_LINK) $(LINKSO) $(BIN_MESI)
