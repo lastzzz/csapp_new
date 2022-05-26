@@ -340,7 +340,7 @@ void bst_internal_delete(rbtree_internal_t *tree,
             uint64_t s_parent = i_node->get_parent(s);
             assert(i_node->is_null_node(s_parent) == 0);
 
-            // swap
+            // swap 
             bst_internal_setchild(x, i_node->get_rightchild(s), RIGHT_CHILD, i_node);
             bst_internal_setchild(x, NULL_ID, LEFT_CHILD, i_node);
             bst_internal_setchild(s, x_left, LEFT_CHILD, i_node);
