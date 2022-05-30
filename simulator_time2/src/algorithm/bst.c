@@ -247,6 +247,11 @@ void bst_internal_delete(rbtree_internal_t *tree,
 
     if (is_x_left_null == 1 && is_x_right_null == 1)
     {
+
+        /////////////////////////////////////////
+        ////csse 1: left node                ///
+        ////////////////////////////////////////
+
         // case 1: leaf node: (x,#,#)
         if (is_rbt == 1)
         {
@@ -268,6 +273,11 @@ void bst_internal_delete(rbtree_internal_t *tree,
     }
     else if (is_x_left_null == 1 || is_x_right_null == 1)
     {
+
+        /////////////////////////////////////////
+        ////csse 2: one sub-tree is empty   ////
+        ////////////////////////////////////////
+
         // case 2: only one null child
         // (x,y,#) or (x,#,y)
         if (is_rbt == 1)
@@ -305,6 +315,12 @@ void bst_internal_delete(rbtree_internal_t *tree,
     }
     else
     {
+        /////////////////////////////////////////
+        ////csse 3: neither sub-tree is empty////
+        ////////////////////////////////////////
+        
+        
+        
         // case 3: no null child: (x,A,B)
 
         // check the n->right->left
