@@ -1,12 +1,4 @@
-/* BCST - Introduction to Computer Systems
- * Author:      yangminz@outlook.com
- * Github:      https://github.com/yangminz/bcst_csapp
- * Bilibili:    https://space.bilibili.com/4564101
- * Zhihu:       https://www.zhihu.com/people/zhao-yang-min
- * This project (code repository and videos) is exclusively owned by yangminz 
- * and shall not be used for commercial and profitting purpose 
- * without yangminz's permission.
- */
+
 
 #include <assert.h>
 #include <stdio.h>
@@ -147,7 +139,7 @@ static int set_redblack_tree_key(uint64_t header_vaddr, uint64_t blocksize)
     return 1;
 }
 
-static rbtree_node_interface i_node = 
+static rbtree_node_interface  i_node = 
 {
     .construct_node = NULL,
     .destruct_node = NULL,
