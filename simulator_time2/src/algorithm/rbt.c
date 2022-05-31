@@ -304,7 +304,7 @@ void rbt_internal_delete(rbtree_internal_t *tree,
             case 0x7:
                 // parent is the only red node among p, s, n, f
                 i_node->set_color(p, COLOR_BLACK);
-                i_node->set_color(s, COLOR_RED);
+                i_node->set_color(s, COLOR_RED); 
                 break;
             case 0x4:
             case 0x5:
