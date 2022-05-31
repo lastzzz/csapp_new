@@ -14,7 +14,7 @@
 #include <string.h>
 #include <assert.h>
 #include "header/algorithm.h"
-#include "header/common.h"
+#include "header/common.h" 
 
 void rbt_validate_interface(rbtree_node_interface *i_node,
     uint64_t flags)
