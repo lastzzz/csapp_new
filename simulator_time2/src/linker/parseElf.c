@@ -215,7 +215,7 @@ static int read_elf(const char *filename, uint64_t bufaddr){
     FILE *fp;
     fp = fopen(filename, "r");
     if (fp == NULL){
-        debug_printf(DEBUG_LINKER, "unable to open file %s\n", filename);
+        // debug_printf(DEBUG_LINKER, "unable to open file %s\n", filename);
         exit(1);
     }
 
@@ -272,7 +272,7 @@ static int read_elf(const char *filename, uint64_t bufaddr){
             line_counter++;
         }
         else {
-            debug_printf(DEBUG_LINKER, "elf file %s is too long (> %d)\n", filename, MAX_ELF_FILE_LENGTH);
+            // debug_printf(DEBUG_LINKER, "elf file %s is too long (> %d)\n", filename, MAX_ELF_FILE_LENGTH);
             fclose(fp);
             exit(1);
         }
