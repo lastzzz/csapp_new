@@ -4,6 +4,7 @@
         "common.h": "c",
         "cpu.h": "c",
         "instruction.h": "c",
-        "setjmp.h": "c"
+        "setjmp.h": "c",
+        "stdio.h": "c"
     }
 }
