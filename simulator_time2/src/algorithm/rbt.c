@@ -45,7 +45,7 @@ static uint64_t rbt_internal_rotate(uint64_t n, uint64_t p, uint64_t g,
     uint64_t p_left = i_node->get_leftchild(p);
     uint64_t p_right = i_node->get_rightchild(p);
     uint64_t g_left = i_node->get_leftchild(g);
-    uint64_t g_right = i_node->get_rightchild(g);
+    // uint64_t g_right = i_node->get_rightchild(g);
 
     if (i_node->compare_nodes(g_left, p) == 0)
     {
