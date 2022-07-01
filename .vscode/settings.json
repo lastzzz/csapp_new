@@ -1,0 +1,9 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "common.h": "c",
+        "cpu.h": "c",
+        "instruction.h": "c",
+        "setjmp.h": "c"
+    }
+}
