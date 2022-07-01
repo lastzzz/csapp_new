@@ -21,9 +21,9 @@ uint64_t round_up(uint64_t x, uint64_t n)
 /*  Block Operations                     */
 /* ------------------------------------- */
 
-#define AF_BIT (0) // 检查是否分配
-#define P8_BIT (1) // 检查前一个block大小是否为8字节
-#define B8_BIT (2) // 检查当前block大小是否为8字节
+#define AF_BIT (0)
+#define P8_BIT (1)
+#define B8_BIT (2)
 
 static void set_bit(uint64_t vaddr, int bit_offset)
 {
