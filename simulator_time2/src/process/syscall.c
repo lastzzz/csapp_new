@@ -75,7 +75,7 @@ static void write_handler()
         // print as yellow
         printf("\033[33;1m%c\033[0m", pm[va2pa(buf_vaddr + i)]);
     }
-}
+} 
 
 static void getpid_handler()
 {}
