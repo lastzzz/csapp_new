@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun 30 11:11:22 2022
+# Make data base, printed on Sat Jul  2 09:59:02 2022
 
 # Variables
 
@@ -63,7 +63,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /mnt/e/Git/csapp/csapp_new
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-123f654e-f207-4603-b3c4-dc1261c7150a.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-1a714acb-ef65-4cde-b5ad-6efb3cf962ae.sock
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -207,7 +207,7 @@ GNUmakefile:
 # strcache performance: lookups = 19 / hit rate = 15%
 # hash-table stats:
 # Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Thu Jun 30 11:11:22 2022
+# Finished Make data base on Sat Jul  2 09:59:02 2022
 
  
 make: *** No rule to make target 'all'.  Stop.
