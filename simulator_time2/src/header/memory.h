@@ -95,23 +95,23 @@ typedef union{
 
 
 // physical page descriptor
-typedef struct{
+// typedef struct{
     
-    int allocated;
-    int dirty;
-    int time; // LRU cache
+//     int allocated;
+//     int dirty;
+//     int time; // LRU cache
 
 
-    // real world： mapping to anon_vma or address_space
-    // we simply the simulator here
-    // T0DO: if multiple processes are using this page? E.g shared Library
-    pte4_t *pte4; // the reversed mapping: from PPN to page table entry
-    uint64_t daddr;   // binding the revesed mapping with mapping to disk
-}pd_t;
+//     // real world： mapping to anon_vma or address_space
+//     // we simply the simulator here
+//     // T0DO: if multiple processes are using this page? E.g shared Library
+//     pte4_t *pte4; // the reversed mapping: from PPN to page table entry
+//     uint64_t daddr;   // binding the revesed mapping with mapping to disk
+// }pd_t;
 
 // for each pagable (swappable) physical page
 // create one reversed mapping
-pd_t page_map[MAX_NUM_PHYSICAL_PAGE];
+// pd_t page_map[MAX_NUM_PHYSICAL_PAGE];
 
 
 /*======================================*/
