@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul  2 09:59:02 2022
+# Make data base, printed on Sat Jul  2 14:22:31 2022
 
 # Variables
 
@@ -207,7 +207,7 @@ GNUmakefile:
 # strcache performance: lookups = 19 / hit rate = 15%
 # hash-table stats:
 # Load=16/8192=0%, Rehash=0, Collisions=1/19=5%
-# Finished Make data base on Sat Jul  2 09:59:02 2022
+# Finished Make data base on Sat Jul  2 14:22:31 2022
 
  
 make: *** No rule to make target 'all'.  Stop.
